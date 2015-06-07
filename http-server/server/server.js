@@ -2,7 +2,10 @@
 
 function mirror(request, response, next) {
     console.log(request.method + " " + request.url);
-
+    // do not respond to root requests so meteor can serve up the main page
+    if(request.url === '/') {
+        next();
+    }
     if(request.method === "GET") {
         var contentType = request.headers['accept'];
         if(!contentType || contentType === '*/*') {
