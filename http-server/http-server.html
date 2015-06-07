@@ -3,12 +3,19 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Welcome to http-server!</h1>
 
-  {{> hello}}
+This is a simple http-server which does the following:
+
+<ul>
+    <li>GET requests - returns the request headers in JSON as the body of the response</li>
+    <li>POST requests - returns the body in the post as the body of the response</li>
+    <li>PUT requests - returns HTPP status 200</li>
+    <li>DELETE requests - returns HTPP status 200</li>
+    <li>HEAD requests - returns HTPP status 200</li>
+</ul>
+
+This is convenient for testing HTTP endpoints.
+
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>

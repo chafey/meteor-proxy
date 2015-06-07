@@ -24,9 +24,7 @@ Template.hello.events({
         var options = {
             data: {hello: "world"},
             headers : {
-                "x-foo" : '123',
                 'Accept' : 'application/json'
-
             }
         };
         HTTP.call("POST", "/PostProxy", options, function(error, result) {
@@ -42,7 +40,6 @@ Template.hello.events({
     'click #get': function () {
         var options = {
             headers: {
-                "x-foo" : '123',
                 'Accept' : '*/*'
             }
         }
